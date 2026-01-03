@@ -1,41 +1,22 @@
-# Barcelona
-
-Barcelona is a PaaS built on top of AWS. Barcelona manages AWS cluster (VPC, EC2, AutoScaling, ECS, ELB/ALB, etc.), application deployments with docker and ECS, and provides utility functions to manage your applications.
-
-# Documentation
-
-https://github.com/degica/barcelona/tree/master/docs
-
-# Development
-
-## Prerequisites
-
-To start development, you need to install docker and docker-compose.
-
-- For Mac, use [Docker for Mac](https://docs.docker.com/engine/installation/mac/#/docker-for-mac)
-- For Linux, install `docker` and `docker-compose` on your machine.
-
-## Running Barcelona Server
-
-Clone this repository
-
+## Semgrep
+To install:
 ```
-$ git clone https://github.com/degica/barcelona
+sudo snap install semgrep 
 ```
 
-Run the server
-
+Semgrep has a variety of rulesets that can be run, all focused on different vulnerabilities and/or languages.
+Here's how to run a default ruleset for Ruby and how to save the json result to /reports:
 ```
-$ make setup
-$ make up
-```
-
-Now your Barcelona server is running at `localhost:3333`. Try logging in with the below command.
-
-```
-$ bcn login http://localhost:3333 
+semgrep scan --config p/ruby --json --output reports/semgrep.json
 ```
 
-# LICENSE
+## Gitleaks
+To install:
+```
+sudo apt install gitleaks 
+```
 
-MIT
+To run and save the json result to /reports:
+```
+gitleaks detect --source . --report-format json --report-path reports/gitleaks.json
+```
