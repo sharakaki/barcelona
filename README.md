@@ -20,3 +20,8 @@ To run and save the json result to /reports:
 ```
 gitleaks detect --source . --report-format json --report-path reports/gitleaks.json
 ```
+
+
+
+Test secret:
+1eae0f2519e8131371e9c85ad9de83912ba3786edd020ce1333c010d0a025503166d74236e5c57b261c2f4b672feae8fdfb206c75a2b51f312887f177c3dda80
